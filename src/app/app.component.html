@@ -1,6 +1,30 @@
-<md-toolbar color="primary">
-  <span>Custom Toolbar</span>
-  <span class="example-spacer"></span>
-  <md-icon class="example-icon">favorite</md-icon>
-  <md-icon class="example-icon">delete</md-icon>
-</md-toolbar>
+<!--The content below is only a placeholder and can be replaced.-->
+
+<mat-sidenav-container #mainSideNav class="example-sidenav-fab-container" fullscreen>
+  <mat-sidenav #sidenav>
+    <mat-toolbar color="primary">
+      <mat-icon class="example-icon" (click)="sidenav.toggle()">menu</mat-icon>
+      <span>{{ title }}</span>
+      <span class="example-spacer"></span>
+    </mat-toolbar>
+    <div class="example-scrolling-content">
+      <mat-nav-list>
+        <mat-list-item [routerLink]="'/posts/'" routerLinkActive="active">
+          <mat-icon matListIcon>mail</mat-icon>
+          <a matLine>Posts</a>
+        </mat-list-item>
+      </mat-nav-list>
+    </div>
+  </mat-sidenav>
+  <div class="example-scrolling-content">
+    <mat-toolbar color="primary">
+      <mat-icon class="example-icon" (click)="sidenav.toggle()">menu</mat-icon>
+      <span>{{ pageName }}</span>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+
+    <mat-toolbar>
+      <span><em>footer:</em>{{ pageName }}</span>
+    </mat-toolbar>
+  </div>
+</mat-sidenav-container>

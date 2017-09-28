@@ -1,0 +1,8 @@
+<p>
+  post works! {{(details | async)?.length}}
+</p>
+<mat-chip-list class="mat-chip-list-stacked">
+    <mat-chip *ngFor="let detail of details | async">
+      <span>{{detail.title}}</span> - <em>{{detail.body}}</em>
+    </mat-chip>
+</mat-chip-list>
