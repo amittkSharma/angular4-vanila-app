@@ -34,11 +34,15 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 	4. Execute the command ng-serve and sample application will come up.
 	5. Include angular-material framework inside the project
 		a. Install npm install --save @angular/material @angular/cdk @angular/animations
-	6. Execute ng g module material-module command to create a new module in the system. This command is from angular cli. 
+	6. Execute ng g module material-module command to create a new module in the system. This command is from angular cli.
 	7. Import material modules that are needed in the app in the module of the app. The material modules are defined in the API section of the angular material of each component
 	8. Do the following imports in the "app.module"
 		a. import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 		b. import { HttpClientModule } from '@angular/common/http';
 		c. import { MaterialModule } from './material-module/material-module.module';
 	9. Include  : <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> in index.html for the material icons
+
+## License
+
+MIT
 
